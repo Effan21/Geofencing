@@ -16,36 +16,18 @@ public class GeofenceHelper extends ContextWrapper {
     private static final String TAG = "GeofenceHelper";
     PendingIntent pendingIntent;
 
+
+
     public GeofenceHelper(Context base) {
         super(base);
     }
 
-    public GeofencingRequest getGeofencingRequest(Geofence geofence) {
-        return new GeofencingRequest.Builder()
-                .addGeofence(geofence)
-                .setInitialTrigger(GeofencingRequest.INITIAL_TRIGGER_ENTER)
-                .build();
-    }
 
-    public Geofence getGeofence(String ID, LatLng latLng, float radius, int transitionTypes) {
-        return new Geofence.Builder()
-                .setCircularRegion(latLng.latitude, latLng.longitude, radius)
-                .setRequestId(ID)
-                .setTransitionTypes(transitionTypes)
-                .setLoiteringDelay(5000)
-                .setExpirationDuration(Geofence.NEVER_EXPIRE)
-                .build();
-    }
 
-    public PendingIntent getPendingIntent() {
-        if (pendingIntent != null) {
-            return pendingIntent;
-        }
-        Intent intent = new Intent(this, GeofenceBroadcastReceiver.class);
-        pendingIntent = PendingIntent.getBroadcast(this, 2607, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-        return pendingIntent;
-    }
+
+
+
 
     public String getErrorString(Exception e) {
         if (e instanceof ApiException) {
@@ -62,6 +44,6 @@ public class GeofenceHelper extends ContextWrapper {
                     return "GEOFENCE_TOO_MANY_PENDING_INTENTS";
             }
         }
-        return e.getLocalizedMessage();
+        return e.getLocalizedMessage( );
     }
 }

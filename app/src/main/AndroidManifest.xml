@@ -9,6 +9,11 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -17,6 +22,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service android:name=".SpeechService"
+                 android:permission="android.permission.BIND_JOB_SERVICE"
+                 android:enabled="true"
+                 android:exported="true">
+        </service>
         <receiver
             android:name=".GeofenceBroadcastReceiver"
             android:enabled="true"
@@ -49,6 +59,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
+
 
 </manifest>

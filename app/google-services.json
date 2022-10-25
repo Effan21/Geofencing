@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "983085589360",
+    "project_id": "united-bebop-364509",
+    "storage_bucket": "united-bebop-364509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983085589360:android:b43499ed96dc08891fa5b5",
+        "android_client_info": {
+          "package_name": "com.example.geofencing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983085589360-u2tpoj3o4pfu08m4v84qhj8uhfp7l93s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK1WwTCdrXLgE0v0_Ep106HVT9MihfeO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983085589360-u2tpoj3o4pfu08m4v84qhj8uhfp7l93s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
